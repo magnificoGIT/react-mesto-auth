@@ -75,6 +75,11 @@ class Api {
       avatar: data.avatar,
     });
   }
+
+  // в будущем пригодится
+  // setToken(token) {
+  //   this._headers = { ...this._headers, authorization: `Bearer ${token}` }
+  // }
 }
 
 const api = new Api({

@@ -8,6 +8,10 @@
 
 @import url(./blocks/header/__logo/header__logo.css);
 
+@import url(./blocks/header/__auth-link/header__auth-link.css);
+
+@import url(./blocks/header/__email-user/header__email-user.css);
+
 @import url(./blocks/profile/profile.css);
 
 @import url(./blocks/profile/__avatar-container/profile__avatar-container.css);
@@ -113,6 +117,26 @@
 @import url(./blocks/popup/__input/_type/popup__input_type_url-avatar.css);
 
 @import url(./blocks/popup/__form/_type/popup__form_type_confirm.css);
+
+@import url(./blocks/auth/__form/auth__form.css);
+
+@import url(./blocks/auth/__title/auth__title.css);
+
+@import url(./blocks/auth/__input/auth__input.css);
+
+@import url(./blocks/auth/__button/auth__button.css);
+
+@import url(./blocks/auth/__question/auth__question.css);
+
+@import url(./blocks/auth/__question-to-user/auth__question-to-user.css);
+
+@import url(./blocks/auth/__link-autorization/auth__link-authorization.css);
+
+@import url(./blocks/popup/__image-auth/popup__image-auth.css);
+
+@import url(./blocks/popup/__title/_type/popup__title_type_auth.css);
+
+@import url(./blocks/popup/__container-form/_type/popup__container-form_type_auth.css);
 
 body {
   margin: 0 auto;
