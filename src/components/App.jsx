@@ -179,6 +179,8 @@ export default function App() {
       })
       .catch((err) => {
         console.error(`Ошибка при входе в профиль: ${err}`);
+        setStatusRegistration("error");
+        setIsInfoToolTipPopupOpen(true)
       });
   };
 

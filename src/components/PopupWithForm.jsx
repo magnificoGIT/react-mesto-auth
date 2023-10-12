@@ -33,7 +33,6 @@ export default function PopupWithForm(props) {
             className={`popup__form popup__form_type_${props.name}`}
             name={`popup-form-${props.name}`}
             autoComplete="on"
-            noValidate
             onSubmit={props.onSubmit}
           >
             {/* Дочерние элементы, переданные в компонент App */}

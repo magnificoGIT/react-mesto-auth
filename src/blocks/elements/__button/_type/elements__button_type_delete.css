@@ -10,4 +10,5 @@
 
 .elements__button_type_delete:hover {
     opacity: 0.5;
+    transition: 0.2s;
 }

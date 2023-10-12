@@ -13,4 +13,5 @@
 
 .elements__button_type_heart:hover {
     opacity: 0.5;
+    transition: 0.2s;
 }

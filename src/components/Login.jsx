@@ -47,7 +47,6 @@ export default function Login({ onLogin }) {
         className="auth__form auth__form_type_entry"
         onSubmit={handleSubmit}
         autoComplete="on"
-        noValidate
       >
         <h2 className="auth__title auth__title_type_entry">Вход</h2>
         <input

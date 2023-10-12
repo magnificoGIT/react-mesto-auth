@@ -42,7 +42,6 @@ export default function Register({ onRegister }) {
         className="auth__form auth__form_type_entry"
         onSubmit={handleSubmit}
         autoComplete="on"
-        noValidate
       >
         <h2 className="auth__title auth__title_type_registration">
           Регистрация
