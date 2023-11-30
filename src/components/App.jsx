@@ -110,15 +110,16 @@ export default function App() {
   };
 
   const handleCardLike = (card) => {
-    // Проверить, есть ли лайк от текущего пользователя на карточке
-    const isLiked = card.likes.some((item) => item._id === currentUser._id);
-
+    const isLiked = card.likes.some(id => id === currentUser._id);
     // Отправить запрос в API для изменения статуса лайка
     api
       .likeCard(card._id, isLiked)
       .then((newCard) => {
+        // Обновить флаг isLiked на основе результата запроса
+        const updatedCard = newCard.likes.some((item) => item._id === currentUser._id);
+  
         setCards((state) =>
-          state.map((c) => (c._id === card._id ? newCard : c))
+          state.map((c) => (c._id === card._id ? { ...newCard, isLiked: updatedCard } : c))
         );
       })
       .catch((err) => {
@@ -158,7 +159,7 @@ export default function App() {
         .then((res) => {
           // Если запрос успешен, устанавливаем флаг loggedIn в true и обновляем userEmail
           setLoggedIn(true);
-          setUserData(res.data);
+          setUserData(res);
           navigate("/", { replace: true });
         })
         .catch((err) => {

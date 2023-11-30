@@ -7,8 +7,8 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 export default function Card({ card, onCardClick, onCardLike, onCardDelete }) {
   const currentUser = useContext(CurrentUserContext);
-  const isOwn = card.owner._id === currentUser._id;
-  const isLiked = card.likes.some((i) => i._id === currentUser._id);
+  const isOwn = card.owner === currentUser._id;
+  const isLiked = card.likes.some(id => id === currentUser._id);
 
   // Обработчик клика по карточке, вызывает переданный обработчик из props
   const handleCardClick = () => {

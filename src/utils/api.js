@@ -16,9 +16,13 @@ class Api {
 
   // Приватный универсальный метод для отправки запросов с проверкой ответа
   _request(url, method, body) {
+    const token = localStorage.getItem("token");
     const config = {
       method,
-      headers: this._headers,
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${token}`,
+      },
     };
 
     if (body) {
@@ -75,19 +79,11 @@ class Api {
       avatar: data.avatar,
     });
   }
-
-  // в будущем пригодится
-  // setToken(token) {
-  //   this._headers = { ...this._headers, authorization: `Bearer ${token}` }
-  // }
 }
 
 const api = new Api({
-  url: "https://mesto.nomoreparties.co/v1/cohort-73",
-  headers: {
-    "content-type": "application/json",
-    authorization: "7e3981d8-4b67-49f2-be2f-d6712d3ec9f5",
-  },
+  // url: "https://api.mestomagnifico.nomoredomainsmonster.ru",
+  url: "http://localhost:3000",
 });
 
 export default api;
